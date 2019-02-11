@@ -179,6 +179,7 @@
     <Compile Include="Infrastructure\ClaimsAuthorizationAttribute.cs" />
     <Compile Include="Infrastructure\ExtendedClaimsProvider.cs" />
     <Compile Include="Infrastructure\RolesFromClaims.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ClaimBindingModel.cs" />
     <Compile Include="Models\CreateRoleBindingModel.cs" />
     <Compile Include="Models\CreateUserBindingModel.cs" />
