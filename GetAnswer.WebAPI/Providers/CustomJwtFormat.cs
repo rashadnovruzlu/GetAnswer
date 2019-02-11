@@ -2,7 +2,7 @@
 using Microsoft.Owin.Security.DataHandler.Encoder;
 using System;
 using System.Configuration;
-using System.IdentityModel.Tokens.Jwt;
+using System.IdentityModel.Tokens;
 using Thinktecture.IdentityModel.Tokens;
 
 namespace GetAnswer.WebApi.Providers

@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.Identity.Owin;
 
-namespace GetAnswer.WebApi.Providers
+namespace GetAnswer.WebAPI.Providers
 {
     public class CustomOAuthProvider : OAuthAuthorizationServerProvider
     {
