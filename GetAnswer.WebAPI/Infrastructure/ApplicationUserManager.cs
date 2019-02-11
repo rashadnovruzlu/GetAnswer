@@ -37,7 +37,7 @@ namespace GetAnswer.WebAPI.Infrastructure
             };
 
             appUserManager.EmailService = new Services.EmailService();
-
+             
             var dataProtectionProvider = options.DataProtectionProvider;
             if (dataProtectionProvider != null)
             {
