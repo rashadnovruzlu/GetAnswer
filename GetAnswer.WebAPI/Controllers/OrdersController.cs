@@ -19,6 +19,7 @@ namespace GetAnswer.WebAPI.Controllers
             return Ok();
         }
 
+
         [ClaimsAuthorization(ClaimType="FTE", ClaimValue="1")]
         [Route("")]
         public IHttpActionResult Get()
