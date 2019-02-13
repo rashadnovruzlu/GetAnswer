@@ -46,11 +46,13 @@ namespace GetAnswer.WebAPI.Providers
             ClaimsIdentity oAuthIdentity = await user.GenerateUserIdentityAsync(userManager, "JWT");
             oAuthIdentity.AddClaims(ExtendedClaimsProvider.GetClaims(user));
             oAuthIdentity.AddClaims(RolesFromClaims.CreateRolesBasedOnClaims(oAuthIdentity));
-           
+
             var ticket = new AuthenticationTicket(oAuthIdentity, null);
-            
+
+            context.Ticket.Properties.ExpiresUtc = DateTime.UtcNow.AddYears(5);
+
             context.Validated(ticket);
-           
+
         }
     }
 }

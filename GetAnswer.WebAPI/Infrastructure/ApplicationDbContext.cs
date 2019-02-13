@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System.Data.Entity;
 
 namespace GetAnswer.WebAPI.Infrastructure
 {
@@ -10,6 +11,9 @@ namespace GetAnswer.WebAPI.Infrastructure
             Configuration.ProxyCreationEnabled = false;
             Configuration.LazyLoadingEnabled = false;
         }
+
+        public DbSet<Client> Clients { get; set; }
+        public DbSet<RefreshToken> RefreshTokens { get; set; }
 
         public static ApplicationDbContext Create()
         {

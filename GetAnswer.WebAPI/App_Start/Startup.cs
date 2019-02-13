@@ -1,5 +1,9 @@
 ﻿using GetAnswer.WebAPI.Infrastructure;
 using GetAnswer.WebAPI.Models;
+using GetAnswer.WebAPI.Providers;
+using Microsoft.Owin.Security.Facebook;
+using Microsoft.Owin.Security.Google;
+using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using Owin;
 using System.Linq;
@@ -10,9 +14,16 @@ namespace GetAnswer.WebAPI
 {
     public class Startup
     {
+        public static OAuthBearerAuthenticationOptions OAuthBearerOptions { get; private set; }
+        public static GoogleOAuth2AuthenticationOptions googleAuthOptions { get; private set; }
+        public static FacebookAuthenticationOptions facebookAuthOptions { get; private set; }
 
         public void Configuration(IAppBuilder app)
         {
+            app.UseExternalSignInCookie(Microsoft.AspNet.Identity.DefaultAuthenticationTypes.ExternalCookie);
+
+            OAuthBearerOptions = new OAuthBearerAuthenticationOptions();
+
             HttpConfiguration httpConfig = new HttpConfiguration();
 
             ConfigureOAuthTokenGeneration(app);
@@ -22,6 +33,24 @@ namespace GetAnswer.WebAPI
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
             app.UseWebApi(httpConfig);
+
+            //Configure Google External Login
+            googleAuthOptions = new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "1051501955203-c9bc7ceuqo45l8fgepcqnolcn04gbmdt.apps.googleusercontent.com",
+                ClientSecret = "3bPgnu-wLvpKYLTeehplsm8g",
+                Provider = new GoogleAuthProvider()
+            };
+            app.UseGoogleAuthentication(googleAuthOptions);
+
+            //Configure Facebook External Login
+            //facebookAuthOptions = new FacebookAuthenticationOptions()
+            //{
+            //    AppId = "xxx",
+            //    AppSecret = "xxx",
+            //    Provider = new FacebookAuthProvider()
+            //};
+            //app.UseFacebookAuthentication(facebookAuthOptions);
 
         }
 
