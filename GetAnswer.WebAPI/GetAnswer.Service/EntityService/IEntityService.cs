@@ -1,6 +1,7 @@
-﻿using Model.Entity;
+﻿using GetAnswer.Model;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace GetAnswer.Service.EntityService
@@ -20,6 +21,7 @@ namespace GetAnswer.Service.EntityService
         void DeleteRange(IEnumerable<T> entities);
         void DeleteRangeWithoutCommit(IEnumerable<T> entities);
         IEnumerable<T> GetAll();
+        IQueryable<T> GetAsIQueryable();
         IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
         void Update(T entity);
         void UpdateRange(IEnumerable<T> entities);

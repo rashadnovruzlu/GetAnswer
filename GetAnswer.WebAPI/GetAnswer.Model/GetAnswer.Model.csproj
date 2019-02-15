@@ -61,6 +61,10 @@
     <Compile Include="Comment.cs" />
     <Compile Include="County.cs" />
     <Compile Include="DoctorateDegree.cs" />
+    <Compile Include="Entity\AuditableEntity.cs" />
+    <Compile Include="Entity\Entity.cs" />
+    <Compile Include="Entity\IAuditableEntity.cs" />
+    <Compile Include="Entity\IEntity.cs" />
     <Compile Include="FileType.cs" />
     <Compile Include="GetAnswerModel.cs" />
     <Compile Include="Migrations\201902141948253_InitialCreate.cs" />

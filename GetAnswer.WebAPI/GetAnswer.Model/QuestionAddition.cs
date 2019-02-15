@@ -1,13 +1,10 @@
 namespace GetAnswer.Model
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("QuestionAddition")]
-    public partial class QuestionAddition
+    public partial class QuestionAddition : BaseEntity
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]

@@ -45,5 +45,15 @@
     <Compile Include="EntityService\IEntityService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GetAnswer.Model\GetAnswer.Model.csproj">
+      <Project>{b6106d54-7956-4574-8022-58a5bf231959}</Project>
+      <Name>GetAnswer.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GetAnswer.Repository\GetAnswer.Repository.csproj">
+      <Project>{585a4600-d528-4a7c-a28c-4dc66542e902}</Project>
+      <Name>GetAnswer.Repository</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

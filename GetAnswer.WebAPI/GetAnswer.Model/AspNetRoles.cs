@@ -6,14 +6,13 @@ namespace GetAnswer.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class AspNetRoles
+    public partial class AspNetRoles : Entity<string>
     {
         public AspNetRoles()
         {
             AspNetUsers = new HashSet<AspNetUsers>();
         }
 
-        public string Id { get; set; }
 
         [Required]
         [StringLength(256)]

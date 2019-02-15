@@ -5,10 +5,8 @@ namespace GetAnswer.Model
     using System.ComponentModel.DataAnnotations.Schema;
 
     [Table("Answer")]
-    public partial class Answer
+    public partial class Answer : Entity<int>
     {
-        public int Id { get; set; }
-
         public int QuestionId { get; set; }
 
         [Required]

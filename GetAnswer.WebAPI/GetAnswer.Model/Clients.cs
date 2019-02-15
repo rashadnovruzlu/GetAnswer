@@ -1,15 +1,9 @@
 namespace GetAnswer.Model
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
-    public partial class Clients
+    public partial class Clients : Entity<string>
     {
-        public string Id { get; set; }
-
         [Required]
         public string Secret { get; set; }
 

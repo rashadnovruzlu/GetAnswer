@@ -1,8 +1,9 @@
-﻿using DMS.Repository;
-using Model.Entity;
-using Repository;
+﻿using GetAnswer.Model;
+using GetAnswer.Repository;
+using GetAnswer.Repository.GenericRepository;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 
 namespace GetAnswer.Service.EntityService
@@ -147,6 +148,11 @@ namespace GetAnswer.Service.EntityService
         public virtual IEnumerable<T> GetAll()
         {
             return _repository.GetAll();
+        }
+
+        public virtual IQueryable<T> GetAsIQueryable()
+        {
+            return _repository.GetAsIQueryable();
         }
 
         public virtual IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)

@@ -7,11 +7,8 @@ namespace GetAnswer.Model
     using System.Data.Entity.Spatial;
 
     [Table("City")]
-    public partial class City
+    public partial class City : Entity<int>
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
-
         public int CountryId { get; set; }
 
         [Required]

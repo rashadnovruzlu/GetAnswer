@@ -1,13 +1,10 @@
 namespace GetAnswer.Model
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("UserInfo")]
-    public partial class UserInfo
+    public partial class UserInfo : BaseEntity
     {
         [Key]
         public string UserId { get; set; }

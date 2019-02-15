@@ -1,16 +1,12 @@
 namespace GetAnswer.Model
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Question")]
-    public partial class Question
+    public partial class Question : Entity<int>
     {
-        public int Id { get; set; }
-
         public int CategoryId { get; set; }
 
         [Required]

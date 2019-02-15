@@ -87,5 +87,25 @@ namespace UtilityLibrary
             return cleaned;
         }
 
+        //Standard ==>  array[0]=true;array[n]=true;
+        //With this method ==>  array.Set(true,false)
+        public static void Set(this bool[] array, params bool[] values)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = values[i];
+            }
+        }
+
+        //Standard ==>  array[0]=1;array[n]=n;
+        //With this method ==>  array.Set(1,n)
+        public static void Set(this int[] array, params int[] values)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = values[i];
+            }
+        }
+
     }
 }

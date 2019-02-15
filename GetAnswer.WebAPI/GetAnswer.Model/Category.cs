@@ -7,10 +7,8 @@ namespace GetAnswer.Model
     using System.Data.Entity.Spatial;
 
     [Table("Category")]
-    public partial class Category
+    public partial class Category : Entity<int>
     {
-        public int Id { get; set; }
-
         [Column("Category")]
         [Required]
         [StringLength(100)]

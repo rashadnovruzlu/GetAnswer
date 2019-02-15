@@ -1,16 +1,11 @@
 namespace GetAnswer.Model
 {
-    using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("QuestionAttachmentFile")]
-    public partial class QuestionAttachmentFile
+    public partial class QuestionAttachmentFile : Entity<int>
     {
-        public int Id { get; set; }
-
         public int QuestionId { get; set; }
 
         [Required]

@@ -7,11 +7,9 @@ namespace GetAnswer.Model
     using System.Data.Entity.Spatial;
 
     [Table("FileType")]
-    public partial class FileType
+    public partial class FileType : Entity<byte>
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Id { get; set; }
-
+      
         [Required]
         [StringLength(10)]
         public string Extension { get; set; }
