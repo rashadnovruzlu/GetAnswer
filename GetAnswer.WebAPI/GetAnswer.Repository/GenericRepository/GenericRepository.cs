@@ -6,7 +6,7 @@ using System.Data.Entity.Infrastructure;
 using System.Linq;
 using System.Linq.Expressions;
 
-namespace GetAnswer.Repository.GenericRepository
+namespace GetAnswer.Repository
 {
     public interface IGenericRepository<T> where T : BaseEntity
     {

@@ -228,6 +228,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Facades\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902112021135_InitialCreate.resx">

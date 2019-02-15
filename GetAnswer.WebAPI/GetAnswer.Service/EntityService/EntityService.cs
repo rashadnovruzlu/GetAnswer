@@ -1,6 +1,5 @@
 ﻿using GetAnswer.Model;
 using GetAnswer.Repository;
-using GetAnswer.Repository.GenericRepository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
