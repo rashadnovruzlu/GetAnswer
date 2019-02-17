@@ -18,7 +18,7 @@ namespace GetAnswer.Service
             _doctoratedegreeRepository = doctoratedegreeRepository;
         }
  
-        public DoctorateDegree GetById(string Id)
+        public DoctorateDegree GetById(byte Id)
         {
             return _doctoratedegreeRepository.GetById(Id);
         }

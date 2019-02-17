@@ -6,7 +6,7 @@ namespace GetAnswer.Service
 {
     public interface IDoctoratedegreeService : IEntityService<DoctorateDegree>
     {
-        DoctorateDegree GetById(string Id); 
+        DoctorateDegree GetById(byte Id); 
 
     }
 }

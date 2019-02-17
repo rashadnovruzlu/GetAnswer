@@ -18,7 +18,7 @@ namespace GetAnswer.Service
             _filetypeRepository = filetypeRepository;
         }
  
-        public FileType GetById(string Id)
+        public FileType GetById(int Id)
         {
             return _filetypeRepository.GetById(Id);
         }

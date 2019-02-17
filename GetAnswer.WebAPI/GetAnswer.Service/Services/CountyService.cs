@@ -18,7 +18,7 @@ namespace GetAnswer.Service
             _countyRepository = countyRepository;
         }
  
-        public County GetById(string Id)
+        public County GetById(int Id)
         {
             return _countyRepository.GetById(Id);
         }

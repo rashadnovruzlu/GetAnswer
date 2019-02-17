@@ -12,9 +12,9 @@ namespace GetAnswer.Repository
         }
          
 
-        public Category GetById(string id)
+        public Category GetById(int id)
         {
-            return _dbset.Where(x => x.Category1 == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

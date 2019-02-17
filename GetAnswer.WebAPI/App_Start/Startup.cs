@@ -1,5 +1,4 @@
 ﻿using GetAnswer.WebAPI.Infrastructure;
-using GetAnswer.WebAPI.Models;
 using GetAnswer.WebAPI.Providers;
 using Microsoft.Owin.Security.Facebook;
 using Microsoft.Owin.Security.Google;

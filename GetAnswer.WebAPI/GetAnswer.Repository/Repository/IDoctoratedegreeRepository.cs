@@ -4,6 +4,6 @@ namespace GetAnswer.Repository
 {
     public interface IDoctoratedegreeRepository : IGenericRepository<DoctorateDegree>
     {
-        DoctorateDegree GetById(string id);
+        DoctorateDegree GetById(byte id);
     }
 }

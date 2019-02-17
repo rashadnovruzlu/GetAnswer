@@ -6,7 +6,7 @@ namespace GetAnswer.Service
 {
     public interface ICountyService : IEntityService<County>
     {
-        County GetById(string Id); 
+        County GetById(int Id); 
 
     }
 }

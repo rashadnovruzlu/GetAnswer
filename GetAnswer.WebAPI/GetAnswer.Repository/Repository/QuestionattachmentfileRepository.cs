@@ -14,7 +14,7 @@ namespace GetAnswer.Repository
 
         public QuestionAttachmentFile GetById(int id)
         {
-            return _dbset.Where(x => x.QuestionId == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

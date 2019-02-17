@@ -18,7 +18,7 @@ namespace GetAnswer.Service
             _categoryRepository = categoryRepository;
         }
  
-        public Category GetById(string Id)
+        public Category GetById(int Id)
         {
             return _categoryRepository.GetById(Id);
         }

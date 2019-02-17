@@ -6,7 +6,7 @@ namespace GetAnswer.Service
 {
     public interface IFiletypeService : IEntityService<FileType>
     {
-        FileType GetById(string Id); 
+        FileType GetById(int Id); 
 
     }
 }

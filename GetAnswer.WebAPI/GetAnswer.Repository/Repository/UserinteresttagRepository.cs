@@ -14,7 +14,7 @@ namespace GetAnswer.Repository
 
         public UserInterestTag GetById(int id)
         {
-            return _dbset.Where(x => x.TagId == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

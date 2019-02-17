@@ -12,9 +12,9 @@ namespace GetAnswer.Repository
         }
          
 
-        public DoctorateDegree GetById(string id)
+        public DoctorateDegree GetById(byte id)
         {
-            return _dbset.Where(x => x.Name == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

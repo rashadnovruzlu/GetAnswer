@@ -24,7 +24,6 @@ namespace GetAnswer.Repository
             _dbContext = context;
         }
 
-
         /// <summary>
         /// Saves all pending changes
         /// </summary>

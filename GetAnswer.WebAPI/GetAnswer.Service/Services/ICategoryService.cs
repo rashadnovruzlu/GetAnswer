@@ -6,7 +6,7 @@ namespace GetAnswer.Service
 {
     public interface ICategoryService : IEntityService<Category>
     {
-        Category GetById(string Id); 
+        Category GetById(int Id); 
 
     }
 }

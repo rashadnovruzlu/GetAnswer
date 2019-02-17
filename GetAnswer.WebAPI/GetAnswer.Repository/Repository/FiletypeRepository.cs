@@ -12,9 +12,9 @@ namespace GetAnswer.Repository
         }
          
 
-        public FileType GetById(string id)
+        public FileType GetById(int id)
         {
-            return _dbset.Where(x => x.Extension == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

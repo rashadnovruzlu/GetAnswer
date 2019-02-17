@@ -14,7 +14,7 @@ namespace GetAnswer.Repository
 
         public Answer GetById(int id)
         {
-            return _dbset.Where(x => x.QuestionId == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

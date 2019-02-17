@@ -14,7 +14,7 @@ namespace GetAnswer.Repository
 
         public Comment GetById(int id)
         {
-            return _dbset.Where(x => x.AnsweId == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

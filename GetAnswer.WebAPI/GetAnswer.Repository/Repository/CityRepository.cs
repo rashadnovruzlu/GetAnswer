@@ -14,7 +14,7 @@ namespace GetAnswer.Repository
 
         public City GetById(int id)
         {
-            return _dbset.Where(x => x.CountryId == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }

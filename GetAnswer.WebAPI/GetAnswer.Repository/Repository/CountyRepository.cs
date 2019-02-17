@@ -12,9 +12,9 @@ namespace GetAnswer.Repository
         }
          
 
-        public County GetById(string id)
+        public County GetById(int id)
         {
-            return _dbset.Where(x => x.CountryName == id).FirstOrDefault();
+            return _dbset.Where(x => x.Id == id).FirstOrDefault();
         }
     }
 }
