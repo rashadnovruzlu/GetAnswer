@@ -56,6 +56,7 @@ namespace GetAnswer.Model
         public virtual QuestionAddition QuestionAddition { get; set; }
 
         public virtual ICollection<QuestionAttachmentFile> QuestionAttachmentFiles { get; set; }
+
         public virtual ICollection<Tag> TagList { get; set; }
     }
 }
