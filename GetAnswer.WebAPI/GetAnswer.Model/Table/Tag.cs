@@ -16,7 +16,6 @@ namespace GetAnswer.Model
 
         public int CategoryId { get; set; }
 
-        [Column("Tag")]
         [Required]
         [StringLength(50)]
         public string Name { get; set; }

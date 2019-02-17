@@ -12,11 +12,9 @@ namespace GetAnswer.Model
             Questions = new HashSet<Question>();
         }
 
-
-        [Column("Category")]
         [Required]
         [StringLength(100)]
-        public string Category1 { get; set; }
+        public string Name { get; set; }
 
         public bool Status { get; set; }
 

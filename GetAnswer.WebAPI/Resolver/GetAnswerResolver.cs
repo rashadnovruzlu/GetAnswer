@@ -8,39 +8,39 @@ using System.Reflection;
 
 namespace GetAnswer.Helpers
 {
-    public sealed class DMSContainer
+    public sealed class GetAnswerContainer
     {
         public Type Type { get; set; }
         public object Repository { get; set; }
         public Type Service { get; set; }
     }
 
-    public interface IDMSResolver
+    public interface IGetAnswerResolver
     {
         T Create<T>();
         int Commit();
     }
 
-    public sealed class DMSResolver : IDMSResolver
+    public sealed class GetAnswerResolver : IGetAnswerResolver
     {
         private DbContext _context;
         private IUnitOfWork _unitOfWork;
 
         //Services keep in container 
-        private readonly List<DMSContainer> _container = new List<DMSContainer>();
+        private readonly List<GetAnswerContainer> _container = new List<GetAnswerContainer>();
 
         /// <summary>
         /// If you want would be change default context
         /// </summary>
         /// <param name="context"></param>
-        public DMSResolver(DbContext context)
+        public GetAnswerResolver(DbContext context)
         {
             _context = context;
             _unitOfWork = new UnitOfWork(_context);
         }
 
         //Default constructor
-        public DMSResolver()
+        public GetAnswerResolver()
         {
             _context = new GetAnswerContext();
             _unitOfWork = new UnitOfWork(_context);
@@ -69,7 +69,7 @@ namespace GetAnswer.Helpers
             else
             {
                 //Then use for is added in container
-                DMSContainer container = new DMSContainer();
+                GetAnswerContainer container = new GetAnswerContainer();
 
                 container.Type = iService;
 
