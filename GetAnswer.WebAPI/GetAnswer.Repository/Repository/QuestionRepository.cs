@@ -10,7 +10,11 @@ namespace GetAnswer.Repository
         {
 
         }
-         
+
+        public int Count()
+        {
+            return _dbset.Count();
+        }
 
         public Question GetById(int id)
         {
