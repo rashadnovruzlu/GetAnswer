@@ -20,6 +20,12 @@ namespace GetAnswer.Model
 
         public string About { get; set; }
 
+        public int Point { get; set; }
+
+        public int QuestionCount { get; set; }
+
+        public int AnswerCount { get; set; }
+
         public virtual AspNetUser AspNetUser { get; set; }
 
         public virtual City City { get; set; }

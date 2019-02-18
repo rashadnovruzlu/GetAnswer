@@ -17,12 +17,17 @@ namespace GetAnswer.Service
             _unitOfWork = unitOfWork;
             _aspnetuserRepository = aspnetuserRepository;
         }
- 
+
+        public int Count()
+        {
+            return _aspnetuserRepository.GetAsIQueryable().Count();
+        }
+
         public AspNetUser GetById(string Id)
         {
             return _aspnetuserRepository.GetById(Id);
         }
 
-        
+
     }
 }

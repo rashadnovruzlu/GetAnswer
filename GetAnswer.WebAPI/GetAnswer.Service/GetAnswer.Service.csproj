@@ -86,6 +86,10 @@
     <Compile Include="Services\VwAllQuestionService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\GetAnswer.DTO\GetAnswer.DTO.csproj">
+      <Project>{92C37030-B00C-4D96-9796-B984797E97E1}</Project>
+      <Name>GetAnswer.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\GetAnswer.Model\GetAnswer.Model.csproj">
       <Project>{b6106d54-7956-4574-8022-58a5bf231959}</Project>
       <Name>GetAnswer.Model</Name>
