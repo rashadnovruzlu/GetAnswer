@@ -9,14 +9,6 @@ namespace GetAnswer.Model
         [Key]
         public string UserId { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Firstname { get; set; }
-
-        [Required]
-        [StringLength(50)]
-        public string Surname { get; set; }
-
         public byte? DoctorateDegreeId { get; set; }
 
         public int? CityId { get; set; }
