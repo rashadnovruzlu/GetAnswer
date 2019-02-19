@@ -17,12 +17,19 @@ namespace GetAnswer.Service
             _unitOfWork = unitOfWork;
             _questionRepository = questionRepository;
         }
- 
+
+        public int Count()
+        {
+            return _questionRepository.GetAsIQueryable().Count();
+        }
+
         public Question GetById(int Id)
         {
             return _questionRepository.GetById(Id);
         }
 
-        
+
+
+
     }
 }

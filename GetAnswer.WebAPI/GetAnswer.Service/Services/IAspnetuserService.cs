@@ -6,7 +6,8 @@ namespace GetAnswer.Service
 {
     public interface IAspnetuserService : IEntityService<AspNetUser>
     {
-        AspNetUser GetById(string Id); 
+        AspNetUser GetById(string Id);
+        int Count();
 
     }
 }
