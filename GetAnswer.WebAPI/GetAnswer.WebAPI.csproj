@@ -177,6 +177,7 @@
     <Compile Include="Controllers\ClaimsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Facades\TagFacade.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Infrastructure\AuthRepository.cs" />
     <Compile Include="Infrastructure\Client.cs" />
@@ -229,7 +230,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Facades\" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201902112021135_InitialCreate.resx">
