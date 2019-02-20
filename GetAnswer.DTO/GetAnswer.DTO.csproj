@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LetterCategory.cs" />
     <Compile Include="LetterTag.cs" />
     <Compile Include="NameCountDTO.cs" />
     <Compile Include="NameKeyDTO.cs" />

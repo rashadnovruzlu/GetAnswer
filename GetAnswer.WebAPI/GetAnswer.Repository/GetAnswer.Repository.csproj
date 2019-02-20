@@ -82,6 +82,7 @@
     <Compile Include="Repository\IUserinfoRepository.cs" />
     <Compile Include="Repository\IUserinteresttagRepository.cs" />
     <Compile Include="Repository\IVwAllQuestionRepository.cs" />
+    <Compile Include="Repository\IVwTagRepository.cs" />
     <Compile Include="Repository\QuestionadditionRepository.cs" />
     <Compile Include="Repository\QuestionattachmentfileRepository.cs" />
     <Compile Include="Repository\QuestionRepository.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Repository\UserinfoRepository.cs" />
     <Compile Include="Repository\UserinteresttagRepository.cs" />
     <Compile Include="Repository\VwAllQuestionRepository.cs" />
+    <Compile Include="Repository\VwTagRepository.cs" />
     <Compile Include="UnitofWork\IUnitOfWork.cs" />
     <Compile Include="UnitofWork\UnitOfWork.cs" />
   </ItemGroup>

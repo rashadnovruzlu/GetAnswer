@@ -176,7 +176,9 @@
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\ClaimsController.cs" />
     <Compile Include="Controllers\OrdersController.cs" />
+    <Compile Include="Controllers\QuestionController.cs" />
     <Compile Include="Controllers\RolesController.cs" />
+    <Compile Include="Controllers\TagController.cs" />
     <Compile Include="Facades\TagFacade.cs" />
     <Compile Include="Helper.cs" />
     <Compile Include="Infrastructure\AuthRepository.cs" />
@@ -255,6 +257,10 @@
     <ProjectReference Include="GetAnswer.Service\GetAnswer.Service.csproj">
       <Project>{815ba19c-e3e0-4ff2-bfcc-a45d22492c9a}</Project>
       <Name>GetAnswer.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="UtilityLibrary\UtilityLibrary.csproj">
+      <Project>{14107C96-F398-4D5E-A130-199202DE1F9E}</Project>
+      <Name>UtilityLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

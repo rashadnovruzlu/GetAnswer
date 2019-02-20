@@ -76,6 +76,7 @@
     <Compile Include="Services\IUserinfoService.cs" />
     <Compile Include="Services\IUserinteresttagService.cs" />
     <Compile Include="Services\IVwAllQuestionService.cs" />
+    <Compile Include="Services\IVwTagService.cs" />
     <Compile Include="Services\QuestionadditionService.cs" />
     <Compile Include="Services\QuestionattachmentfileService.cs" />
     <Compile Include="Services\QuestionService.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="Services\UserinfoService.cs" />
     <Compile Include="Services\UserinteresttagService.cs" />
     <Compile Include="Services\VwAllQuestionService.cs" />
+    <Compile Include="Services\VwTagService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\GetAnswer.DTO\GetAnswer.DTO.csproj">
@@ -97,6 +99,10 @@
     <ProjectReference Include="..\GetAnswer.Repository\GetAnswer.Repository.csproj">
       <Project>{585a4600-d528-4a7c-a28c-4dc66542e902}</Project>
       <Name>GetAnswer.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilityLibrary\UtilityLibrary.csproj">
+      <Project>{14107C96-F398-4D5E-A130-199202DE1F9E}</Project>
+      <Name>UtilityLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

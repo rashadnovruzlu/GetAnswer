@@ -81,6 +81,7 @@
     <Compile Include="Table\UserInfo.cs" />
     <Compile Include="Table\UserInterestTag.cs" />
     <Compile Include="View\VW_ALL_QUESTION.cs" />
+    <Compile Include="View\VW_TAG.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

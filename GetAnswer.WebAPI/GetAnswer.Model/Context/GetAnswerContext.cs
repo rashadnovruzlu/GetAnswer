@@ -28,10 +28,18 @@
         public virtual DbSet<Tag> Tags { get; set; }
         public virtual DbSet<UserInfo> UserInfoes { get; set; }
         public virtual DbSet<UserInterestTag> UserInterestTags { get; set; }
+
         public virtual DbSet<VW_ALL_QUESTION> VW_ALL_QUESTION { get; set; }
+        public virtual DbSet<VW_TAG> VW_TAG { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<VW_TAG>()
+             .Property(e => e.Type)
+             .IsUnicode(false);
+
+
             modelBuilder.Entity<Answer>()
                 .HasMany(e => e.Comments)
                 .WithRequired(e => e.Answer)

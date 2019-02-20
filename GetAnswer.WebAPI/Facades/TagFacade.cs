@@ -5,30 +5,32 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using UtilityLibrary;
 
 namespace GetAnswer.WebAPI.Facades
 {
     public interface ITagFacade
     {
-        List<LetterTag> GetAlphabetical();
+       
     }
 
     public class TagFacade : ITagFacade
     {
         IGetAnswerResolver _getAnswerResolver;
         ITagService _tagService;
-        IQuestionService _questionService;
+        IVwTagService _viewTagService;
 
         public TagFacade(IGetAnswerResolver getAnswerResolver)
         {
-            _getAnswerResolver = getAnswerResolver;
+            _getAnswerResolver = new GetAnswerResolver();
+
             _tagService = _getAnswerResolver.Create<ITagService>();
-            _questionService = _getAnswerResolver.Create<IQuestionService>();
+
+            _viewTagService = _getAnswerResolver.Create<IVwTagService>();
         }
 
-        public List<LetterTag> GetAlphabetical()
-        {
-            return null;
-        }
+        
+
+        
     }
 }
