@@ -6,7 +6,8 @@ namespace GetAnswer.Service
 {
     public interface IQuestionService : IEntityService<Question>
     {
-        Question GetById(int Id); 
+        Question GetById(int Id);
+        int Count();
 
     }
 }
