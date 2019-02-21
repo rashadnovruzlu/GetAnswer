@@ -1,11 +1,6 @@
 ﻿using GetAnswer.Helpers;
 using GetAnswer.Service;
 using GetAnswer.WebAPI.Facades;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace GetAnswer.WebAPI.Controllers
@@ -27,7 +22,6 @@ namespace GetAnswer.WebAPI.Controllers
 
             _userFacade = new UserFacade(_getAnswerResolver);
         }
-
 
         [Route("count")]
         public IHttpActionResult GetTagCount()

@@ -1,10 +1,8 @@
 ﻿using GetAnswer.DTO;
 using GetAnswer.Helpers;
 using GetAnswer.Service;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace GetAnswer.WebAPI.Facades
 {
@@ -55,8 +53,6 @@ namespace GetAnswer.WebAPI.Facades
 
             return model.Take(6).ToList();
         }
-
-
 
         public List<NameCountDTO> GetUserByQuestion()
         {
