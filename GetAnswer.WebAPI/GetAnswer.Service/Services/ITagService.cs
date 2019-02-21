@@ -9,5 +9,6 @@ namespace GetAnswer.Service
     {
         Tag GetById(int Id);
         List<NameCountDTO> GetMostUsedTag();
+        int Count();
     }
 }

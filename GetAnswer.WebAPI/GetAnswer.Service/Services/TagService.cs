@@ -18,7 +18,12 @@ namespace GetAnswer.Service
             _unitOfWork = unitOfWork;
             _tagRepository = tagRepository;
         }
- 
+
+        public int Count()
+        {
+            return _tagRepository.GetAsIQueryable().Count();
+        }
+
         public Tag GetById(int Id)
         {
             return _tagRepository.GetById(Id);
@@ -26,9 +31,9 @@ namespace GetAnswer.Service
 
         public List<NameCountDTO> GetMostUsedTag()
         {
-           return _tagRepository.GetAsIQueryable().OrderByDescending(x => x.Count)
-                                .Select(x => new NameCountDTO
-                                { Id = x.Id.ToString(), Name = x.Name, Count = x.Count }).Take(8).ToList();
+            return _tagRepository.GetAsIQueryable().OrderByDescending(x => x.Count)
+                                 .Select(x => new NameCountDTO
+                                 { Id = x.Id.ToString(), Name = x.Name, Count = x.Count }).Take(8).ToList();
         }
     }
 }

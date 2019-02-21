@@ -11,26 +11,26 @@ namespace GetAnswer.WebAPI.Facades
 {
     public interface ITagFacade
     {
-       
+    
+
     }
 
     public class TagFacade : ITagFacade
     {
         IGetAnswerResolver _getAnswerResolver;
+
         ITagService _tagService;
+
         IVwTagService _viewTagService;
 
         public TagFacade(IGetAnswerResolver getAnswerResolver)
         {
-            _getAnswerResolver = new GetAnswerResolver();
+            _getAnswerResolver = getAnswerResolver;
 
             _tagService = _getAnswerResolver.Create<ITagService>();
 
             _viewTagService = _getAnswerResolver.Create<IVwTagService>();
         }
-
-        
-
-        
+ 
     }
 }

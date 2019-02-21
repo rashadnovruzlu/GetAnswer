@@ -16,8 +16,11 @@ namespace GetAnswer.WebAPI.Controllers
     public class TagController : BaseApiController
     {
         IGetAnswerResolver _getAnswerResolver;
+
         ITagService _tagService;
+
         IVwTagService _viewTagService;
+
         ITagFacade _tagFacade;
 
         public TagController()
@@ -31,9 +34,16 @@ namespace GetAnswer.WebAPI.Controllers
             _tagFacade = new TagFacade(_getAnswerResolver);
         }
 
-
         [Route("count")]
         public IHttpActionResult GetTagCount()
+        {
+            var model = _tagService.Count();
+
+            return Ok(model);
+        }
+
+        [Route("mostusedtag")]
+        public IHttpActionResult GetMostUsedTag()
         {
             var model = _tagService.GetMostUsedTag();
 
@@ -43,7 +53,7 @@ namespace GetAnswer.WebAPI.Controllers
         [Route("alphabetic")]
         public IHttpActionResult GetTagAlphabetic(int page, int count)
         {
-            var model= _viewTagService.GetAlphabetical().Take(count).Skip(page * count);
+            var model = _viewTagService.GetAlphabetical().Take(count).Skip(page * count);
 
             return Ok(model);
         }
